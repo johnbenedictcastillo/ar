@@ -9,11 +9,11 @@ window.onload = () => {
         lng = position.coords.longitude;
       });
 
-    let places = staticLoadPlaces();
+    let places = staticLoadPlaces(lat,lng );
     renderPlaces(places);
 };
 
-function staticLoadPlaces() {
+function staticLoadPlaces(lat,lng) {
     return [
         {
             name: 'Pokèmon',
