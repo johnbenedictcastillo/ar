@@ -36,17 +36,20 @@ var models = [
         url: './assets/magnemite/scene.gltf',
         scale: '0.09 0.09 0.09',
         info: 'Magnemite, Lv. 5, HP 10/10',
+        position: '0 0 0',
         rotation: '0 180 0',
     },
     {
         url: './assets/articuno/scene.gltf',
         scale: '0.03 0.03 0.03',
+        position: '5 0 0',
         rotation: '0 180 0',
         info: 'Articuno, Lv. 80, HP 100/100',
     },
     {
         url: './assets/dragonite/scene.gltf',
         scale: '0.006 0.006 0.006',
+        position: '0 5 0',
         rotation: '0 180 0',
         info: 'Dragonite, Lv. 99, HP 150/150',
     },
@@ -84,7 +87,7 @@ function renderPlaces(places) {
 
         setModel(models[modelIndex], model);
         
-        model.setAttribute('look-at', '[gps-camera]');
+        //model.setAttribute('look-at', '[gps-camera]');
         model.setAttribute('animation-mixer', '');
 
         document.querySelector('button[data-action="change"]').addEventListener('click', function () {
