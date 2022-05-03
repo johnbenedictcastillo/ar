@@ -18,6 +18,15 @@
       embedded
       arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
     >
+    <a-entity
+    gltf-model="./assets/magnemite/scene.gltf"
+    gps-entity-place="latitude: 14.4181663; longitude: 121.4448211;"
+    look-at="[gps-camera]"
+    scale="0.5 0.5 0.5"
+    rotation="0 180 0"
+    animation-mixer="loop:repeat"
+  >
+  </a-entity>
       <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
     <div class="centered">
