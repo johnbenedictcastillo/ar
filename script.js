@@ -7,6 +7,9 @@ window.onload = () => {
     navigator.geolocation.getCurrentPosition((position) => {
         lat = position.coords.latitude;
         lng = position.coords.longitude;
+        
+        console.log(lat)
+        console.log(lng)
       });
 
     let places = staticLoadPlaces(lat,lng );
