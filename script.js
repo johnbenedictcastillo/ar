@@ -6,7 +6,9 @@ window.onload = () => {
     var lng = 0
     navigator.geolocation.getCurrentPosition((position) => {
         lat = position.coords.latitude;
+        console.log(lat)
         lng = position.coords.longitude;
+        console.log(lng)
       });
 
     let places = staticLoadPlaces(lat,lng );
@@ -14,6 +16,8 @@ window.onload = () => {
 };
 
 function staticLoadPlaces(lat,lng) {
+    console.log(lat)
+    console.log(lng)
     return [
         {
             name: 'Pokèmon',
@@ -75,7 +79,7 @@ function renderPlaces(places) {
         let longitude = place.location.lng;
 
         let model = document.createElement('a-entity');
-        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+        model.setAttribute('gps-entity-place', 'latitude: ${latitude}; longitude: ${longitude};');
 
         setModel(models[modelIndex], model);
 
