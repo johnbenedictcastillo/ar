@@ -89,6 +89,7 @@ function renderPlaces(places) {
         
         //model.setAttribute('look-at', '[gps-camera]');
         model.setAttribute('animation-mixer', '');
+        model.setAttribute('gesture-handler', '');
 
         document.querySelector('button[data-action="change"]').addEventListener('click', function () {
             var entity = document.querySelector('[gps-entity-place]');
